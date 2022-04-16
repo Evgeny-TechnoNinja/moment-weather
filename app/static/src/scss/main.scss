@@ -1,6 +1,5 @@
-$color_a: rgb(11, 150, 120);
-
-.container {
-    background: $color_a;
-    font-size: 30px;
-}
+@import "vars/variables";
+@import "fonts/fonts";
+@import "grid/grid";
+@import "width/width";
+@import "components/base";
