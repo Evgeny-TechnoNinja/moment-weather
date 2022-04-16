@@ -1,6 +1,8 @@
 from app import app
+from flask import render_template
+from .config import APP_NAME
 
 
 @app.route('/')
 def index():
-    return "<h1>Work test app</h1>"
+    return render_template("index.html", title=APP_NAME)
