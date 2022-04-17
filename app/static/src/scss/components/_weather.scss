@@ -1,8 +1,12 @@
 .weather {
+    margin-top: 20px;
     background-color: $swatch_0;
     border: 1px solid $swatch_2;
+    @media (min-width: $md) {
+        margin-top: 50px;
+    }
     &__content-top {
-        background-color: rgb(212, 103, 103);
+        // background-color: rgb(212, 103, 103);
     }
     &__content-middle {
         background-color: rgb(206, 226, 116);

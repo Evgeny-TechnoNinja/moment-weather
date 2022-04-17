@@ -303,10 +303,12 @@ button:active,
   outline: 0; }
 
 .weather {
+  margin-top: 20px;
   background-color: #2F259DB2;
   border: 1px solid #93a1a1; }
-  .weather__content-top {
-    background-color: #d46767; }
+  @media (min-width: 640px) {
+    .weather {
+      margin-top: 50px; } }
   .weather__content-middle {
     background-color: #cee274; }
   .weather__content-bottom {
@@ -314,5 +316,32 @@ button:active,
 
 .control-panel {
   background-color: #b65be0; }
+
+.card-notifi {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  padding-left: 10px; }
+  .card-notifi__content_bottom {
+    margin-top: 10px; }
+  .card-notifi__txt {
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 0px 4px 4px #00000040; }
+    .card-notifi__txt_big {
+      font-weight: bold;
+      font-size: 24px; }
+      @media (min-width: 640px) {
+        .card-notifi__txt_big {
+          font-size: 34px; } }
+    .card-notifi__txt_accent {
+      font-size: 20px;
+      color: #FFDB4D; }
+      @media (min-width: 640px) {
+        .card-notifi__txt_accent {
+          font-size: 30px; } }
 
 /*# sourceMappingURL=main.css.map */

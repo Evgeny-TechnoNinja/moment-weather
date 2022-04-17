@@ -1,0 +1,36 @@
+.card-notifi {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    &__content_top {
+
+    }
+    &__content_bottom {
+        margin-top: 10px;
+
+    }
+    &__txt {
+        display: block;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-shadow: 0px 4px 4px $swatch_10;
+
+        &_big{
+            font-weight: bold;
+            font-size: 24px;
+            @media (min-width: $md) {
+                font-size: 34px;
+            }
+        }
+        &_accent{
+            font-size: 20px;
+            color: $swatch_5;
+            @media (min-width: $md) {
+                font-size: 30px;
+            }
+        }
+    }
+}
