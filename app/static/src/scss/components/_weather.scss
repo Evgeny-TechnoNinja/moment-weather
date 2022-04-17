@@ -1,0 +1,13 @@
+.weather {
+    background-color: $swatch_0;
+    border: 1px solid $swatch_2;
+    &__content-top {
+        background-color: rgb(212, 103, 103);
+    }
+    &__content-middle {
+        background-color: rgb(206, 226, 116);
+    }
+    &__content-bottom {
+        background-color: rgb(70, 150, 224);
+    }
+}

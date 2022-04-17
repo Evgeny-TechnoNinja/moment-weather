@@ -243,14 +243,14 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  background-color: #C4C4C40A;
+  background-color: #c4c4c428;
   color: #FFFFFF;
   border-color: #E5E5E5; }
 
 input:disabled,
 select:disabled,
 textarea:disabled {
-  background-color: #C4C4C40A;
+  background-color: #c4c4c428;
   color: #FFFFFF;
   border-color: #E5E5E5; }
 
@@ -287,13 +287,32 @@ button:active,
   position: relative;
   overflow: hidden; }
 
+.content-wrap {
+  position: relative;
+  overflow: hidden; }
+
 .container {
-  max-width: 744px;
+  max-width: 100%;
   min-width: 320px;
   margin: 0 auto;
   padding: 0 15px; }
-
+  @media (min-width: 640px) {
+    .container {
+      max-width: 744px; } }
 .button:focus {
   outline: 0; }
+
+.weather {
+  background-color: #2F259DB2;
+  border: 1px solid #93a1a1; }
+  .weather__content-top {
+    background-color: #d46767; }
+  .weather__content-middle {
+    background-color: #cee274; }
+  .weather__content-bottom {
+    background-color: #4696e0; }
+
+.control-panel {
+  background-color: #b65be0; }
 
 /*# sourceMappingURL=main.css.map */

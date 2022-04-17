@@ -179,11 +179,19 @@ button:active,
   overflow: hidden;
 }
 
+.content-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
 .container {
-  max-width: 744px;
+  max-width: 100%;
   min-width: 320px;
   margin: 0 auto;
   padding: 0 15px;
+  @media (min-width: $md) {
+    max-width: 744px;
+  }
 }
 
 .button:focus {
