@@ -83,6 +83,13 @@
             position: relative;
             top: -8px;
         }
+        &_position-top {
+            position: relative;
+            top: -20px;
+            @media (min-width: $sm) {
+                top: 0px;
+            }
+        }
     }
     &__sing-o {
         font-size: 35px;
@@ -101,5 +108,16 @@
         @media (min-width: $lg) {
             font-size: 45px;
         }
+    }
+    &__box-picture{
+        margin: 0 auto;
+        width: 80px;
+        height: auto;
+        overflow: hidden;
+
+    }
+    &__picture{
+        display: inline-block;
+        width: 100%;
     }
 }

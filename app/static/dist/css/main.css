@@ -307,14 +307,12 @@ figure {
 
 .weather {
   margin-top: 20px;
+  margin-bottom: 20px;
   background-color: #2F259DB2;
   border: 1px solid #93a1a1; }
   @media (min-width: 640px) {
     .weather {
       margin-top: 50px; } }
-  .weather__content-bottom {
-    background-color: #4696e0; }
-
 .control-panel {
   background-color: #b65be0; }
 
@@ -386,6 +384,12 @@ figure {
       display: flex;
       position: relative;
       top: -8px; }
+    .card-notifi__txt_position-top {
+      position: relative;
+      top: -20px; }
+      @media (min-width: 480px) {
+        .card-notifi__txt_position-top {
+          top: 0px; } }
   .card-notifi__sing-o {
     font-size: 35px; }
     @media (min-width: 480px) {
@@ -402,6 +406,15 @@ figure {
     @media (min-width: 960px) {
       .card-notifi__sing-c {
         font-size: 45px; } }
+  .card-notifi__box-picture {
+    margin: 0 auto;
+    width: 80px;
+    height: auto;
+    overflow: hidden; }
+  .card-notifi__picture {
+    display: inline-block;
+    width: 100%; }
+
 @media (min-width: 640px) {
   .infographic {
     padding-top: 20px; } }

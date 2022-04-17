@@ -54,9 +54,42 @@
             </div>
             <div class="weather__content-bottom">
                 <div class="grid">
-                    <div class="grid__item width-1-3">BOTTOM 1</div>
-                    <div class="grid__item width-1-3">BOTTOM 2</div>
-                    <div class="grid__item width-1-3">BOTTOM 3</div>
+                    <div class="grid__item width-1-1 width-1-3-sm">
+                        <div class="card-notifi card-notifi_position_left">
+                            <div class="card-notifi__content-top">
+                                <figure class="card-notifi__box-picture">
+                                    <img src="{{url_for('static', filename='images/other/humidity.svg')}}" alt="humidity" class="card-notifi__picture">
+                                </figure>
+                            </div>
+                            <div class="card-notifi__content-bottom">
+                                <span class="card-notifi__txt card-notifi__txt_accent">40%</span>
+                            </div>
+                        </div>        
+                    </div>
+                    <div class="grid__item width-1-1 width-1-3-sm">
+                        <div class="card-notifi">
+                            <div class="card-notifi__content-top">
+                                <figure class="card-notifi__box-picture">
+                                    <img src="{{url_for('static', filename='images/other/wind.svg')}}" alt="wind" class="card-notifi__picture">
+                                </figure>
+                            </div>
+                            <div class="card-notifi__content-bottom">
+                                <span class="card-notifi__txt card-notifi__txt_accent">2.68 м/с</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__item width-1-1 width-1-3-sm">
+                        <div class="card-notifi card-notifi_position_right">
+                            <div class="card-notifi__content-top">
+                                <figure class="card-notifi__box-picture">
+                                    <img src="{{url_for('static', filename='images/other/visibility.svg')}}" alt="visibility" class="card-notifi__picture">
+                                </figure>
+                            </div>
+                            <div class="card-notifi__content-bottom">
+                                <span class="card-notifi__txt card-notifi__txt_accent card-notifi__txt_position-top">10000 м</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="control-panel">
