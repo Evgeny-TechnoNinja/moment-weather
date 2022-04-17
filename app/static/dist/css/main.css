@@ -302,6 +302,9 @@ button:active,
 .button:focus {
   outline: 0; }
 
+figure {
+  margin: 0px; }
+
 .weather {
   margin-top: 20px;
   background-color: #2F259DB2;
@@ -309,8 +312,6 @@ button:active,
   @media (min-width: 640px) {
     .weather {
       margin-top: 50px; } }
-  .weather__content-middle {
-    background-color: #cee274; }
   .weather__content-bottom {
     background-color: #4696e0; }
 
@@ -322,7 +323,28 @@ button:active,
   padding-bottom: 20px;
   padding-right: 10px;
   padding-left: 10px; }
-  .card-notifi__content_bottom {
+  @media (min-width: 480px) {
+    .card-notifi_position_left {
+      margin-left: 40px; } }
+  @media (min-width: 960px) {
+    .card-notifi_position_left {
+      margin-left: 60px; } }
+  @media (min-width: 480px) {
+    .card-notifi_position_right {
+      margin-right: 40px; } }
+  @media (min-width: 960px) {
+    .card-notifi_position_right {
+      margin-right: 60px; } }
+  @media (min-width: 480px) {
+    .card-notifi__content-top {
+      margin-top: 20px; } }
+  @media (min-width: 960px) {
+    .card-notifi__content-top {
+      margin-top: 35px; } }
+  .card-notifi__content-top_position-deg {
+    display: flex;
+    justify-content: center; }
+  .card-notifi__content-bottom {
     margin-top: 10px; }
   .card-notifi__txt {
     display: block;
@@ -333,15 +355,81 @@ button:active,
     text-shadow: 0px 4px 4px #00000040; }
     .card-notifi__txt_big {
       font-weight: bold;
-      font-size: 24px; }
+      font-size: 44px; }
+      @media (min-width: 480px) {
+        .card-notifi__txt_big {
+          font-size: 30px; } }
       @media (min-width: 640px) {
         .card-notifi__txt_big {
-          font-size: 34px; } }
+          font-size: 40px; } }
+      @media (min-width: 960px) {
+        .card-notifi__txt_big {
+          font-size: 44px; } }
+    .card-notifi__txt_big-mega {
+      font-size: 80px; }
+      @media (min-width: 960px) {
+        .card-notifi__txt_big-mega {
+          font-size: 100px; } }
     .card-notifi__txt_accent {
-      font-size: 20px;
+      font-size: 30px;
       color: #FFDB4D; }
+      @media (min-width: 480px) {
+        .card-notifi__txt_accent {
+          font-size: 20px; } }
       @media (min-width: 640px) {
         .card-notifi__txt_accent {
           font-size: 30px; } }
+      @media (min-width: 960px) {
+        .card-notifi__txt_accent {
+          font-size: 30px; } }
+    .card-notifi__txt_position-sing {
+      display: flex;
+      position: relative;
+      top: -8px; }
+  .card-notifi__sing-o {
+    font-size: 35px; }
+    @media (min-width: 480px) {
+      .card-notifi__sing-o {
+        font-size: 30px; } }
+    @media (min-width: 960px) {
+      .card-notifi__sing-o {
+        font-size: 35px; } }
+  .card-notifi__sing-c {
+    font-size: 45px; }
+    @media (min-width: 480px) {
+      .card-notifi__sing-c {
+        font-size: 40px; } }
+    @media (min-width: 960px) {
+      .card-notifi__sing-c {
+        font-size: 45px; } }
+@media (min-width: 640px) {
+  .infographic {
+    padding-top: 20px; } }
+
+@media (min-width: 480px) {
+  .infographic_position_left {
+    margin-left: 40px; } }
+
+@media (min-width: 960px) {
+  .infographic_position_left {
+    margin-left: 60px; } }
+
+.infographic__box-picture {
+  margin: 0 auto;
+  width: 250px;
+  height: auto;
+  overflow: hidden; }
+  @media (min-width: 480px) {
+    .infographic__box-picture {
+      width: 180px; } }
+  @media (min-width: 640px) {
+    .infographic__box-picture {
+      width: 200px; } }
+  @media (min-width: 960px) {
+    .infographic__box-picture {
+      width: 250px; } }
+.infographic__picture {
+  display: inline-block;
+  width: 100%; }
 
 /*# sourceMappingURL=main.css.map */

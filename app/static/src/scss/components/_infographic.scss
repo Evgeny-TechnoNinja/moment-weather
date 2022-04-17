@@ -1,0 +1,35 @@
+.infographic {
+    @media (min-width: $md) {
+        padding-top: 20px;
+    }
+    &_position {
+        &_left{
+            @media (min-width: $sm) {
+                margin-left: 40px;
+            }
+            @media (min-width: $lg) {
+                margin-left: 60px;
+            }
+        }
+    }
+    &__box-picture {
+        margin: 0 auto;
+        width: 250px;
+        height: auto;
+        overflow: hidden;
+        @media (min-width: $sm) {
+            width: 180px;
+        }
+        @media (min-width: $md) {
+            width: 200px;
+        }
+        @media (min-width: $lg) {
+            width: 250px;
+        }
+
+    }
+    &__picture{
+        display: inline-block;
+        width: 100%;
+    }
+}

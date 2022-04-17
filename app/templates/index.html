@@ -5,22 +5,22 @@
         <div class="weather">
             <div class="weather__content-top">
                 <div class="grid">
-                    <div class="grid__item width-1-2">
-                        <div class="card-notifi">
-                            <div class="card-notifi__content_top">
+                    <div class="grid__item width-1-1 width-1-2-sm">
+                        <div class="card-notifi card-notifi_position_left">
+                            <div class="card-notifi__content-top">
                                 <span class="card-notifi__txt card-notifi__txt_big">15</span>
                             </div>
-                            <div class="card-notifi__content_bottom">
+                            <div class="card-notifi__content-bottom">
                                 <span class="card-notifi__txt card-notifi__txt_accent">Пятница</span>
                             </div>
                         </div>
                     </div>
-                    <div class="grid__item width-1-2">
-                        <div class="card-notifi">
-                            <div class="card-notifi__content_top">
+                    <div class="grid__item width-1-1 width-1-2-sm">
+                        <div class="card-notifi card-notifi_position_right">
+                            <div class="card-notifi__content-top">
                                 <span class="card-notifi__txt card-notifi__txt_big">Харьков</span>
                             </div>
-                            <div class="card-notifi__content_bottom">
+                            <div class="card-notifi__content-bottom">
                                 <span class="card-notifi__txt card-notifi__txt_accent">12:30</span>
                             </div>
                         </div>
@@ -29,8 +29,27 @@
             </div>
             <div class="weather__content-middle">
                 <div class="grid">
-                    <div class="grid__item width-1-1 width-1-2-md">MIDDLE 1</div>
-                    <div class="grid__item width-1-1 width-1-2-md">MIDDLE 2</div>
+                    <div class="grid__item width-1-1 width-1-2-sm">
+                        <div class="infographic infographic_position_left">
+                            <figure class="infographic__box-picture">
+                                <img src="{{url_for('static', filename='images/weather/10d.svg')}}" alt="picture weather" class="infographic__picture">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="grid__item width-1-1 width-1-2-sm">
+                        <div class="card-notifi card-notifi_position_right">
+                            <div class="card-notifi__content-top card-notifi__content-top_position-deg">
+                                <span class="card-notifi__txt card-notifi__txt_big card-notifi__txt_big-mega">15</span>
+                                <span class="card-notifi__txt card-notifi__txt_big card-notifi__txt_position-sing">
+                                    <span class="card-notifi__sing-o">o</span>
+                                    <span class="card-notifi__sing-c">c</span>
+                                </span>
+                            </div>
+                            <div class="card-notifi__content-bottom">
+                                <span class="card-notifi__txt card-notifi__txt_accent">Легкий дождь</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="weather__content-bottom">

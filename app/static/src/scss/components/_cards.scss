@@ -3,10 +3,38 @@
     padding-bottom: 20px;
     padding-right: 10px;
     padding-left: 10px;
-    &__content_top {
+    &_position {
+        &_left {
+            @media (min-width: $sm) {
+                margin-left: 40px;
+            }
+            @media (min-width: $lg) {
+                margin-left: 60px;
+            }
+        }
+        &_right {
+            @media (min-width: $sm) {
+                margin-right: 40px;
+            }
+            @media (min-width: $lg) {
+                margin-right: 60px;
+            }
+        }
+    }
+    &__content-top {
+        @media (min-width: $sm) {
+            margin-top: 20px;
+        }
+        @media (min-width: $lg) {
+            margin-top: 35px;
+        }
+        &_position-deg {
+            display: flex;
+            justify-content: center;
+        }
 
     }
-    &__content_bottom {
+    &__content-bottom {
         margin-top: 10px;
 
     }
@@ -20,17 +48,58 @@
 
         &_big{
             font-weight: bold;
-            font-size: 24px;
+            font-size: 44px;
+            @media (min-width: $sm) {
+                font-size: 30px;
+            }
             @media (min-width: $md) {
-                font-size: 34px;
+                font-size: 40px;
+            }
+            @media (min-width: $lg) {
+                font-size: 44px;
+            }
+        }
+        &_big-mega {
+            font-size: 80px;
+            @media (min-width: $lg) {
+                font-size: 100px;
             }
         }
         &_accent{
-            font-size: 20px;
+            font-size: 30px;
             color: $swatch_5;
+            @media (min-width: $sm) {
+                font-size: 20px;
+            }
             @media (min-width: $md) {
                 font-size: 30px;
             }
+            @media (min-width: $lg) {
+                font-size: 30px;
+            }
+        }
+        &_position-sing {
+            display: flex;
+            position: relative;
+            top: -8px;
+        }
+    }
+    &__sing-o {
+        font-size: 35px;
+        @media (min-width: $sm) {
+            font-size: 30px;
+        }
+        @media (min-width: $lg) {
+            font-size: 35px;
+        }
+    }
+    &__sing-c {
+        font-size: 45px;
+        @media (min-width: $sm) {
+            font-size: 40px;
+        }
+        @media (min-width: $lg) {
+            font-size: 45px;
         }
     }
 }
