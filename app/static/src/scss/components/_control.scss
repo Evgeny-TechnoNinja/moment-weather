@@ -1,3 +1,30 @@
 .control-panel {
-    background-color: rgb(182, 91, 224);
+    margin-top: 50px;
+    margin-bottom: 15px;
+    &__box-button{
+        display: flex;
+        justify-content: center;
+        &_position {
+            &_right {
+                @media (min-width: $sm) {
+                    justify-content: end;
+                    padding-right: 91px;
+                }
+                @media (min-width: $md) {
+                    padding-right: 80px;
+                    margin-right: 20px;
+                }
+                @media (min-width: $lg) {
+                    padding-right: 100px;
+                }
+            }
+            &_left {
+                @media (min-width: $md) {
+                    justify-content: end;
+                    position: relative;
+                    left: 40px;
+                }
+            }
+        }
+    }
 }

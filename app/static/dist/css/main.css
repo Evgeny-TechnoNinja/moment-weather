@@ -160,7 +160,7 @@ a {
   text-decoration: underline; }
 
 a:hover {
-  color: #d33682; }
+  color: #e61278; }
 
 img {
   max-width: 100%;
@@ -255,13 +255,13 @@ textarea:disabled {
   border-color: #E5E5E5; }
 
 input::placeholder {
-  color: #d33682; }
+  color: #e61278; }
 
 textarea::placeholder {
-  color: #d33682; }
+  color: #e61278; }
 
 select {
-  color: #d33682; }
+  color: #e61278; }
 
 select::-ms-expand {
   display: none; }
@@ -314,8 +314,27 @@ figure {
     .weather {
       margin-top: 50px; } }
 .control-panel {
-  background-color: #b65be0; }
-
+  margin-top: 50px;
+  margin-bottom: 15px; }
+  .control-panel__box-button {
+    display: flex;
+    justify-content: center; }
+    @media (min-width: 480px) {
+      .control-panel__box-button_position_right {
+        justify-content: end;
+        padding-right: 91px; } }
+    @media (min-width: 640px) {
+      .control-panel__box-button_position_right {
+        padding-right: 80px;
+        margin-right: 20px; } }
+    @media (min-width: 960px) {
+      .control-panel__box-button_position_right {
+        padding-right: 100px; } }
+    @media (min-width: 640px) {
+      .control-panel__box-button_position_left {
+        justify-content: end;
+        position: relative;
+        left: 40px; } }
 .card-notifi {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -411,6 +430,9 @@ figure {
     width: 80px;
     height: auto;
     overflow: hidden; }
+    @media (min-width: 480px) {
+      .card-notifi__box-picture {
+        width: 65px; } }
   .card-notifi__picture {
     display: inline-block;
     width: 100%; }
@@ -444,5 +466,26 @@ figure {
 .infographic__picture {
   display: inline-block;
   width: 100%; }
+
+.button {
+  display: flex;
+  background-color: transparent;
+  border: 0;
+  align-content: center;
+  justify-content: center;
+  width: 50px;
+  height: 65px;
+  cursor: pointer; }
+  .button__box-picture {
+    display: block; }
+    .button__box-picture_position {
+      padding-left: 5px;
+      padding-top: 2px; }
+  .button__box-picture > svg {
+    fill: #FFFFFF;
+    width: 50px;
+    filter: drop-shadow(3px 3px 2px #00000070); }
+  .button__box-picture > svg:hover {
+    fill: #e61278; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,29 @@
+.button {
+    display: flex;
+    background-color: transparent;
+    border: 0;
+    // border: 1px solid red;
+    align-content: center;
+    justify-content: center;
+    width: 50px;
+    height: 65px;
+    cursor: pointer;
+    &__box-picture{
+        display: block;
+        &_position{
+            padding-left: 5px;
+            padding-top: 2px; 
+        }
+    }
+    &__box-picture > svg {
+        fill: $swatch_4;
+        width: 50px;
+        filter: drop-shadow( 3px 3px 2px $swatch_11);
+    }
+    &__box-picture > svg {
+        &:hover {
+            fill: $swatch_9;
+        }
+    }
+    
+}
