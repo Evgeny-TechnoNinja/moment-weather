@@ -1,0 +1,17 @@
+.decor-gradient{
+    overflow: hidden;
+    background: linear-gradient(203.33deg, $swatch_0 44.5%, $swatch_1 71.19%);
+    border: 1px solid $swatch_2;
+}
+
+.decor-background {
+    background: no-repeat url("../../images/other/weather-bg.svg");
+    background-position: center 30%;
+    @media (min-width: $sm) {
+        background-position: center 45%;
+        background-size: 100%;
+    }
+    @media (min-width: $md) {
+        background-position: center 65%;
+    }
+}

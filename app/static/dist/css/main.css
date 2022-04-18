@@ -308,8 +308,7 @@ figure {
 .weather {
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: #2F259DB2;
-  border: 1px solid #93a1a1; }
+  background-color: rgba(47, 37, 157, 0.3); }
   @media (min-width: 640px) {
     .weather {
       margin-top: 50px; } }
@@ -487,5 +486,21 @@ figure {
     filter: drop-shadow(3px 3px 2px #00000070); }
   .button__box-picture > svg:hover {
     fill: #e61278; }
+
+.decor-gradient {
+  overflow: hidden;
+  background: linear-gradient(203.33deg, #2F259DB2 44.5%, #10347AB2 71.19%);
+  border: 1px solid #93a1a1; }
+
+.decor-background {
+  background: no-repeat url("../../images/other/weather-bg.svg");
+  background-position: center 30%; }
+  @media (min-width: 480px) {
+    .decor-background {
+      background-position: center 45%;
+      background-size: 100%; } }
+  @media (min-width: 640px) {
+    .decor-background {
+      background-position: center 65%; } }
 
 /*# sourceMappingURL=main.css.map */
