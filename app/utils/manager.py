@@ -1,5 +1,7 @@
 from flask import session
 import requests
+from geopy.geocoders import Nominatim
+from app.config import APP_NAME
 
 
 class Manager:
@@ -46,3 +48,10 @@ class Manager:
     def get_data(self, url):
         self.__data_order(url)
         return self.__check_data()
+
+    @staticmethod
+    def get_location(data):
+        location = Nominatim(user_agent=APP_NAME).geocode(data)
+        if location:
+            return {"lat": location.latitude, "lon": location.longitude}
+        return False
