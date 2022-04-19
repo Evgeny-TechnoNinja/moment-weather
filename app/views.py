@@ -35,3 +35,8 @@ def index():
         else:
             pass
     return render_template("index.html", title=APP_NAME, data=page_weather_data)
+
+
+@app.route("/settings", methods=["GET", "POST"])
+def settings():
+    return "<h1>settings</h1>"
