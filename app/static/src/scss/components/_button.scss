@@ -25,5 +25,32 @@
             fill: $swatch_9;
         }
     }
-    
+    &_flat {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid $swatch_4;
+        width: 100px;
+        height: 50px;
+        background-color: $swatch_13; 
+        &:hover .button__box-picture > svg {
+            fill: $swatch_9; 
+        }
+        &:hover {
+            border-color: $swatch_9;
+        }
+        &_position {
+            @media (min-width: $sm) {
+                position: relative;
+                left: 5px;
+            }
+            @media (min-width: $md) {
+                position: relative;
+                left: -15px;
+            }
+        }
+    }
 }
+
+
+

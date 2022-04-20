@@ -39,4 +39,5 @@ def index():
 
 @app.route("/settings", methods=["GET", "POST"])
 def settings():
-    return "<h1>settings</h1>"
+    # TODO: continue
+    return render_template("settings.html", title=APP_NAME)

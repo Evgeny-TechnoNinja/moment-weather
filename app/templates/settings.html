@@ -1,0 +1,42 @@
+{% extends '_base.html' %}
+{% block main %}
+<div class="content-wrap">
+    <div class="container">
+        <div class="weather">
+            <div class="decor-gradient">
+                <div class="weather__box-form">
+                    <form action="" method="POST" class="form">
+                        <div class="form__box-top">
+                            <h3 class="form__heading">Местоположение</h3>
+                            <ul class="form__list">
+                                <li class="form__list-item">
+                                    <span class="form__txt">Укажите:</span>
+                                </li>
+                                <li class="form__list-item">
+                                    <span class="form__txt form__txt_accent">Страна, Город</span>
+                                </li>
+                                <li class="form__list-item">
+                                    <span class="form__txt form__txt_accent">Страна, Город, Район</span>
+                                </li>
+                                <li class="form__list-item">
+                                    <span class="form__txt form__txt_accent">Страна, Округ, Город</span>
+                                </li>
+                            </ul>                           
+                        </div>
+                        <div class="form__box-bottom">
+                            <input type="text" maxlength="65" required="required" class="form__field">
+                            <button type="submit" class="button button_flat button_flat_position">
+                                <div class="button__box-picture">
+                                    <svg width="81" height="47" viewBox="0 0 81 47" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M79.9308 22.2755L79.2261 21.2327L59.3811 1.87771C58.1013 0.621613 55.9872 0.621613 54.7074 1.87771C53.4276 3.13381 53.4276 5.17991 54.7074 6.43601L68.9067 20.2847H4.1148C2.2923 20.2847 0.809998 21.7304 0.809998 23.5079C0.809998 25.2854 2.2923 26.7311 4.1148 26.7311H68.8986L54.6993 40.5798C53.4195 41.828 53.4195 43.882 54.6993 45.1381C55.9872 46.3863 58.1013 46.3863 59.373 45.1381L79.218 25.7831L79.9308 24.7403L80.1819 23.5237V23.5079L79.9308 22.2755Z"/>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+{% endblock %}
