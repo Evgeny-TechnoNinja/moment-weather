@@ -2,7 +2,7 @@ from flask import session
 import requests
 from geopy.geocoders import Nominatim  # type: ignore
 from app.config import APP_NAME
-from typing import Union, Optional
+from typing import Union
 
 
 class Manager:
@@ -26,6 +26,7 @@ class Manager:
 
     @session_data.setter
     def session_data(self, value):
+        session.permanent = True
         session[self.name_key_ip], session[self.name_key_geodata] = value
 
     def __data_order(self, url: str) -> dict:

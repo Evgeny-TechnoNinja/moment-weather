@@ -4,21 +4,21 @@ from .config import APP_NAME, URL_IP, SETTINGS_WEATHER
 from app.utils import Manager, Weather
 import geocoder  # type: ignore
 from typing import Dict
+from .forms import SettingsForm
 
 
 @app.route('/')
 def index():
-    page_weather_data: dict = {}
     manager = Manager("ip_address", "coordinates")
     ip_address, coordinates = manager.session_data
     if not ip_address and not coordinates:
         ip_address: str = manager.get_data(URL_IP)
         if not ip_address:
-            pass
+            return redirect("settings")
         address: str = geocoder.ip(ip_address).address
         coordinates: dict = manager.get_location(address)
         if not coordinates:
-            pass
+            return redirect("settings")
         manager.session_data = [ip_address, coordinates]
         return redirect(url_for("index"))
     else:
@@ -33,11 +33,17 @@ def index():
                 pass
             page_weather_data = weather.execution(meteorology_data)
         else:
-            pass
+            return redirect("settings")
     return render_template("index.html", title=APP_NAME, data=page_weather_data)
 
 
 @app.route("/settings", methods=["GET", "POST"])
 def settings():
-    # TODO: continue
-    return render_template("settings.html", title=APP_NAME)
+    manager = Manager("ip_address", "coordinates")
+    form = SettingsForm()
+    if form.validate_on_submit():
+        location = form.location.data
+        coordinates = manager.get_location(location)
+        manager.session_data = ["0.0.0.0", coordinates]
+        return redirect(url_for("index"))
+    return render_template("settings.html", title=APP_NAME, form=form)

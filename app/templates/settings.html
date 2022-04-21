@@ -5,7 +5,8 @@
         <div class="weather">
             <div class="decor-gradient">
                 <div class="weather__box-form">
-                    <form action="" method="POST" class="form">
+                    <form action="" method="POST" autocomplete="off" class="form">
+                        {{ form.csrf_token }}
                         <div class="form__box-top">
                             <h3 class="form__heading">Местоположение</h3>
                             <ul class="form__list">
@@ -24,7 +25,8 @@
                             </ul>                           
                         </div>
                         <div class="form__box-bottom">
-                            <input type="text" maxlength="65" required="required" class="form__field">
+<!--                            <input type="text" maxlength="65" required="required" class="form__field">-->
+                            {{form.location(class_="form__field")}}
                             <button type="submit" class="button button_flat button_flat_position">
                                 <div class="button__box-picture">
                                     <svg width="81" height="47" viewBox="0 0 81 47" xmlns="http://www.w3.org/2000/svg">
