@@ -13,3 +13,4 @@ SETTINGS_WEATHER = {
     "LANG": ["uk", "ru"],
     "UNITS": ["imperial", "metric"]
 }
+WORDS = ["location", "Specify", "Country", "City", "district",  "Сounty"]

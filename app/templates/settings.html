@@ -8,19 +8,19 @@
                     <form action="" method="POST" autocomplete="off" class="form">
                         {{ form.csrf_token }}
                         <div class="form__box-top">
-                            <h3 class="form__heading">Местоположение</h3>
+                            <h3 class="form__heading">{{words[0]}}</h3>
                             <ul class="form__list">
                                 <li class="form__list-item">
-                                    <span class="form__txt">Укажите:</span>
+                                    <span class="form__txt">{{words[1]}}:</span>
                                 </li>
                                 <li class="form__list-item">
-                                    <span class="form__txt form__txt_accent">Страна, Город</span>
+                                    <span class="form__txt form__txt_accent">{{words[2]}}, {{words[3]}}</span>
                                 </li>
                                 <li class="form__list-item">
-                                    <span class="form__txt form__txt_accent">Страна, Город, Район</span>
+                                    <span class="form__txt form__txt_accent">{{words[2]}}, {{words[3]}}, {{words[4]|title}}</span>
                                 </li>
                                 <li class="form__list-item">
-                                    <span class="form__txt form__txt_accent">Страна, Округ, Город</span>
+                                    <span class="form__txt form__txt_accent">{{words[2]}}, {{words[5]}}, {{words[3]}}</span>
                                 </li>
                             </ul>                           
                         </div>

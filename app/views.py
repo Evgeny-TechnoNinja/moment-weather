@@ -1,7 +1,7 @@
 from app import app
 from flask import render_template, url_for, redirect
-from .config import APP_NAME, URL_IP, SETTINGS_WEATHER
-from app.utils import Manager, Weather
+from .config import APP_NAME, URL_IP, SETTINGS_WEATHER, WORDS
+from app.utils import Manager, Weather, translator
 import geocoder  # type: ignore
 from typing import Dict
 from .forms import SettingsForm
@@ -39,6 +39,7 @@ def index():
 
 @app.route("/settings", methods=["GET", "POST"])
 def settings():
+    translated_words = [translator.translate(word, SETTINGS_WEATHER["LANG"][0]) for word in WORDS]
     manager = Manager("ip_address", "coordinates")
     form = SettingsForm()
     if form.validate_on_submit():
@@ -46,4 +47,4 @@ def settings():
         coordinates = manager.get_location(location)
         manager.session_data = ["0.0.0.0", coordinates]
         return redirect(url_for("index"))
-    return render_template("settings.html", title=APP_NAME, form=form)
+    return render_template("settings.html", title=APP_NAME, form=form, words=translated_words)
