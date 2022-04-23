@@ -90,6 +90,15 @@
                 top: 0px;
             }
         }
+        &_special-size {
+            font-size: 30px;
+            white-space: normal;
+            overflow: inherit;
+            @media (min-width: $md) {
+                margin-bottom: 25px;
+            }
+            
+        }
     }
     &__sing-o {
         font-size: 35px;

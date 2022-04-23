@@ -20,7 +20,11 @@
                             <div class="grid__item width-1-1 width-1-2-sm">
                                 <div class="card-notifi card-notifi_position_right">
                                     <div class="card-notifi__content-top">
-                                        <span class="card-notifi__txt card-notifi__txt_big">{{ data["city"] }}</span>
+                                        {% if data["city"]|length < 10 %}
+                                            <span class="card-notifi__txt card-notifi__txt_big">{{ data["city"] }}</span>
+                                        {% else %}
+                                            <span class="card-notifi__txt card-notifi__txt_big card-notifi__txt_special-size">{{ data["city"] }}</span>
+                                        {% endif %}
                                     </div>
                                     <div class="card-notifi__content-bottom">
                                         <span class="card-notifi__txt card-notifi__txt_accent">{{ data["date"][1]["time"] }}</span>

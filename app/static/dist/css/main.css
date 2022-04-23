@@ -411,6 +411,13 @@ figure {
       @media (min-width: 480px) {
         .card-notifi__txt_position-top {
           top: 0px; } }
+    .card-notifi__txt_special-size {
+      font-size: 30px;
+      white-space: normal;
+      overflow: inherit; }
+      @media (min-width: 640px) {
+        .card-notifi__txt_special-size {
+          margin-bottom: 25px; } }
   .card-notifi__sing-o {
     font-size: 35px; }
     @media (min-width: 480px) {
