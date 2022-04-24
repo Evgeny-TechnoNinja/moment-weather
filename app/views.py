@@ -28,10 +28,12 @@ def index():
             weather = Weather(lat, lon, SETTINGS_WEATHER["API_KEY"],
                               SETTINGS_WEATHER["LANG"][0], SETTINGS_WEATHER["UNITS"][1])
             url: str = weather.get_url()
-            meteorology_data = manager.get_data(url)
+            meteorology_data: dict = manager.get_data(url)
             if not meteorology_data:
-                pass
+                return render_template("error.html", title=APP_NAME), 500
             page_weather_data = weather.execution(meteorology_data)
+            if not page_weather_data:
+                return render_template("error.html", title=APP_NAME), 500
         else:
             return redirect("settings")
     return render_template("index.html", title=APP_NAME, data=page_weather_data)
@@ -43,8 +45,8 @@ def settings():
     manager = Manager("ip_address", "coordinates")
     form = SettingsForm()
     if form.validate_on_submit():
-        location = form.location.data
-        coordinates = manager.get_location(location)
+        location: str = form.location.data
+        coordinates: Dict[str, str] = manager.get_location(location)
         manager.session_data = ["0.0.0.0", coordinates]
         return redirect(url_for("index"))
     return render_template("settings.html", title=APP_NAME, form=form, words=translated_words)

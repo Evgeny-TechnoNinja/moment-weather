@@ -20,17 +20,20 @@ class Weather:
 
     @typing.no_type_check
     def __handling_meteo_data(self, meteo_data: dict) -> Dict[str, Any]:
-        return {
-            "temp": floor(meteo_data.get("main").get("temp")),
-            "city": translate(meteo_data.get("name"), self.parameters[-2]),
-            "humidity": meteo_data.get("main").get("humidity"),  # %
-            "wind": meteo_data.get("wind").get("speed"),  # m/s
-            "visibility": meteo_data.get("visibility"),  # max 10000 m
-            "desc": meteo_data.get("weather")[0].get("description"),
-            "icon": meteo_data.get("weather")[0].get("icon"),
-            "date": self.__provide_date(meteo_data),
-            "lang": self.parameters[-2]
-        }
+        try:
+            return {
+                "temp": floor(meteo_data.get("main").get("temp")),
+                "city": translate(meteo_data.get("name"), self.parameters[-2]),
+                "humidity": meteo_data.get("main").get("humidity"),  # %
+                "wind": meteo_data.get("wind").get("speed"),  # m/s
+                "visibility": meteo_data.get("visibility"),  # max 10000 m
+                "desc": meteo_data.get("weather")[0].get("description"),
+                "icon": meteo_data.get("weather")[0].get("icon"),
+                "date": self.__provide_date(meteo_data),
+                "lang": self.parameters[-2]
+            }
+        except AttributeError as error:
+            return {}
 
     def __provide_date(self, data: dict) -> List[Union[Dict[str, str], Dict[str, str], Dict[str, str]]]:
         shift_time = int(data["timezone"])

@@ -1,0 +1,40 @@
+{% extends '_base.html' %}
+{% block main %}
+<div class="content-wrap">
+  <div class="container">
+    <div class="weather">
+      <div class="decor-gradient">
+        <div class="weather__box-error">
+          <div class="error">
+            <div class="grid">
+              <div class="grid__item width-1-1 width-1-2-md">
+                <figure class="error__box-picture">
+                  <img src="{{url_for('static', filename='images/weather/00dn.svg')}}" alt="error picture" class="error__picture">
+                </figure>
+              </div>
+              <div class="grid__item width-1-1 width-1-2-md">
+                <div class="error__box-notifi">
+                  <span class="error__txt">Oops, can't get data. We have an error.</span> 
+                </div>
+              </div>
+              <div class="grid__item width-1-1">
+                <div class="error__box-button">
+                  <button class="button">
+                    <a href="{{url_for('index')}}">
+                        <div class="button__box-picture">
+                            <svg width="72" height="63" viewBox="0 0 72 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30.6709 9.61876C21.0898 11.475 12.5291 19.7438 9.92126 29.5313C6.23622 43.65 15.2504 58.3875 29.8772 62.1563C44.7874 66.0375 60.4346 55.6875 63.0992 40.2188C63.8929 35.4938 63.326 33.525 60.8882 33.3C58.5638 33.075 57.7134 34.2563 57.2032 38.3625C56.3528 45.3938 51.5339 51.9188 44.9008 55.0125C42.1228 56.3063 40.9323 56.5313 36.2835 56.5313C31.6346 56.5313 30.4441 56.3063 27.6661 55.0125C23.1874 52.9313 19.6157 49.5 17.4047 45.0563C15.7039 41.625 15.5905 40.95 15.5905 35.7188C15.5905 30.6563 15.7606 29.8125 17.2346 27C19.389 22.8375 22.7906 19.4063 26.9291 17.2688C30.1039 15.5813 30.6709 15.4688 36.2835 15.4688C41.4425 15.4688 42.5764 15.6375 44.674 16.7625C46.9984 18 47.1118 18.1688 46.2614 19.0688C44.9575 20.475 45.1276 22.275 46.6016 23.2875C47.5087 23.9625 49.2661 24.1875 53.1213 24.1875C57.6567 24.1875 58.5638 24.0188 59.5276 23.0625C61.0016 21.6 60.9449 20.925 58.7906 14.9625C56.8063 9.39376 55.8992 8.49376 53.4614 9.33751C52.2142 9.73125 51.8173 10.2938 51.7039 11.7L51.5339 13.5L48.7559 12.0938C43.3701 9.39376 36.5669 8.43751 30.6709 9.61876Z"/>
+                            </svg>                                    
+                        </div>
+                    </a>
+                  </button>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
