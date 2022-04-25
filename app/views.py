@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, url_for, redirect
+from flask import render_template, url_for, redirect, request
 from .config import APP_NAME, URL_IP, SETTINGS_WEATHER, WORDS
 from app.utils import Manager, Weather, translator
 import geocoder  # type: ignore
@@ -12,7 +12,9 @@ def index():
     manager = Manager("ip_address", "coordinates")
     ip_address, coordinates = manager.session_data
     if not ip_address and not coordinates:
-        ip_address: str = manager.get_data(URL_IP)
+        # ip_address: str = manager.get_data(URL_IP)
+        ip_address: str = request.remote_addr
+        print("IP address:", ip_address, type(ip_address))
         if not ip_address:
             return redirect("settings")
         address: str = geocoder.ip(ip_address).address
