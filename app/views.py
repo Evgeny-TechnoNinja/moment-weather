@@ -13,9 +13,9 @@ def index():
     ip_address, coordinates = manager.session_data
     if not ip_address and not coordinates:
         # to work on a local server
-        ip_address = manager.get_data(URL_IP)
+        # ip_address = manager.get_data(URL_IP)
         # to work production
-        # ip_address = request.headers.get('X-Forwarded-For')
+        ip_address = request.headers.get('X-Forwarded-For')
         if not ip_address:
             return redirect("settings")
         address: str = geocoder.ip(ip_address).address
