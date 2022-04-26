@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template, url_for, redirect, request
-from .config import APP_NAME, SETTINGS_WEATHER, WORDS
+from .config import APP_NAME, SETTINGS_WEATHER, WORDS, URL_IP
 from app.utils import Manager, Weather, translator
 import geocoder  # type: ignore
 from typing import Dict
@@ -12,7 +12,10 @@ def index():
     manager = Manager("ip_address", "coordinates")
     ip_address, coordinates = manager.session_data
     if not ip_address and not coordinates:
-        ip_address = request.headers.get('X-Forwarded-For')
+        # to work on a local server
+        ip_address = manager.get_data(URL_IP)
+        # to work production
+        # ip_address = request.headers.get('X-Forwarded-For')
         if not ip_address:
             return redirect("settings")
         address: str = geocoder.ip(ip_address).address
@@ -29,6 +32,8 @@ def index():
                               SETTINGS_WEATHER["LANG"][0], SETTINGS_WEATHER["UNITS"][1])
             url: str = weather.get_url()
             meteorology_data: dict = manager.get_data(url)
+            meteorology_data["name"]: str = manager.get_address(meteorology_data["coord"]["lat"],
+                                                                meteorology_data["coord"]["lon"])
             if not meteorology_data:
                 return render_template("error.html", title=APP_NAME), 500
             page_weather_data = weather.execution(meteorology_data)

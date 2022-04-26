@@ -1,8 +1,9 @@
 from flask import session
 import requests
 from geopy.geocoders import Nominatim  # type: ignore
-from app.config import APP_NAME
+from app.config import APP_NAME, SETTINGS_WEATHER
 from typing import Union
+from .translator import translate
 
 
 class Manager:
@@ -60,3 +61,13 @@ class Manager:
         if location:
             return {"lat": location.latitude, "lon": location.longitude}
         return False
+
+    @staticmethod
+    def get_address(lat: float, lon: float) -> str:
+        address = Nominatim(user_agent=APP_NAME).reverse(f"{lat},{lon}").raw['address']
+        if address:
+            if "city" in address:
+                return translate(address.get("city"), SETTINGS_WEATHER["LANG"][0])
+            if "county" in address:
+                return translate(address.get("county"), SETTINGS_WEATHER["LANG"][0])
+        return translate("Undefined", SETTINGS_WEATHER["LANG"][0])
