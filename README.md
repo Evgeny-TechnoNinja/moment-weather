@@ -10,4 +10,4 @@
 ### Можно потестить
 
 
-[Жми сюда](http://enigmatic-reef-92717.herokuapp.com/)
+[Жми сюда](http://flask-moment-weather.herokuapp.com/)
