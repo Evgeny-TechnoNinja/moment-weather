@@ -10,4 +10,4 @@
 ### Можно потестить
 
 
-[Жми сюда](http://flask-moment-weather.herokuapp.com/)
+[Жми сюда](http://moment-weather.herokuapp.com/)
